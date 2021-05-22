@@ -1,6 +1,6 @@
 # Weedless
 
-A function hooking tool for the Mach-O format based on dylib redirection.
+A function hooking tool for the Mach-O format based on dylib redirection (for educational use only).
 
 ## How does it work?
 Weedless parses and modifies the dynamic linker info stored inside a Mach-O. 
