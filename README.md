@@ -70,3 +70,20 @@ Example:
 ## Code signing
 Any modification to a code-signed application will cause that application to crash during startup. Future version might have an option to remove the code signature from the binary. For now, there are plenty of tools available that can do that.
 
+## Running the example
+The example directory contains the following:
+- `value.h/c` compiles to `libvalue.dylib`
+- `example.c` compiles to `example_target` and links against `libvalue.dylib`
+- `hooks.c` compile to `libhooks.dylib`
+- `hooks.json` weedless config file
+
+```
+# Run the clean example binary.
+./build/example/example_target
+
+# Patch the binary using `example/hooks.json`
+./build/weedless example/hooks.json
+
+# Run the patched example binary. (Output should be different because of hooks.)
+./build/example/example_target
+```
