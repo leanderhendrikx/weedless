@@ -137,7 +137,7 @@ struct LazyBindingInfo
   void setDylibIndex(uint64_t index)
   {
     if (dylibBindOpcode == BIND_OPCODE_SET_DYLIB_ORDINAL_IMM) {
-      if (index > std::numeric_limits<uint8_t>::max()) {
+      if (index > 15) {
         throw std::runtime_error("Dylib ordinal does not fit in imm opcode (not supported)");
       }
       dylibIndexPtr[0] = BIND_OPCODE_SET_DYLIB_ORDINAL_IMM + (index & BIND_IMMEDIATE_MASK);
