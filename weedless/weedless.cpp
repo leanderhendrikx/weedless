@@ -3,16 +3,8 @@
 #include "config.h"
 #include "install.h"
 
-// sys
-#include <sys/mman.h>
-#include <sys/stat.h>
-#include <sys/types.h>
-
 // stl
-#include <fcntl.h>
-#include <unistd.h>
 #include <iostream>
-#include <string>
 
 int main(int argc, char* argv[]) {
   if (argc != 2) {
