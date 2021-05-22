@@ -28,7 +28,7 @@ _getValue | dylib index 3 <- changed from 2 to 3.
 ```
 
 ## Limitations
-Weedless sometimes uses the padding bytes after the lazy binding info section to inject more opcodes. There are two ways that a symbol can be encoded in an opcode (IMM vs ULEB). If the symbol points to a very low dylib index (<16) it's encoded using an immediate in the opcode (IMM). Symbols that come from a dylib with a bigger index (>= 16) are encoded using an extra ULEB opcode. If weedless modifies a symbol that points to a low dylib index to point to a high dylib index, it needs to change it's opcode from IMM to ULEB (which takes extra space).
+There are two ways that a symbol can be encoded in an opcode (IMM vs ULEB). If the symbol points to a very low dylib index (<16) it's encoded using an immediate in the opcode (IMM). Symbols that come from a dylib with a bigger index (>= 16) are encoded using an extra ULEB opcode. Weedless does not yet support conversion from IMM to ULEB opcodes. 
 
 ## Building
 ```
