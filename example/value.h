@@ -1,0 +1,2 @@
+
+int GetValue(void);

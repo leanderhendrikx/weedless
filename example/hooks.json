@@ -1,0 +1,18 @@
+{
+  "config":
+  {
+    "dylibs": [
+      { 
+        "name": "libhooks",
+        "path": "build/example/libhooks.dylib", 
+        "install_name": "@executable_path/libhooks.dylib"
+      }
+    ],
+    "hooks": [ 
+      { "symbol": "_strlen",   "dylib_name": "libhooks" },
+      { "symbol": "_GetValue", "dylib_name": "libhooks" },
+      { "symbol": "_ptrace",   "dylib_name": "libhooks" }
+    ],
+    "target": "build/example/example_target"
+  }
+}
