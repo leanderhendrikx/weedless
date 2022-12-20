@@ -30,6 +30,7 @@
 
 // c
 #include <cstring>
+#include <cmath>
 #include <fcntl.h>
 #include <unistd.h>
 #include <sys/mman.h>
