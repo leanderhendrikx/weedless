@@ -87,7 +87,3 @@ The example directory contains the following:
 # Run the patched example binary. (Output should be different because of hooks.)
 ./build/example/example_target
 ```
-
-## Like this project?
-Buy me a coffee.  
-BTC 3F7R4WQa5pZKewHTC7RWFL2YtKRX1AVb43
